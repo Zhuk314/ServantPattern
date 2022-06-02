@@ -2,6 +2,8 @@ package app;
 
 import servant.DriveServant;
 import serviced.Car;
+import serviced.Motorcycle;
+import serviced.SemiTruck;
 import utils.Direction;
 
 /**
@@ -14,20 +16,29 @@ public class Application {
      * @param args not used
      */
     public static void main(String[] args) {
-        Car myFord = new Car();
+        Car car = new Car();
+        SemiTruck truck = new SemiTruck();
+        Motorcycle motorcycle = new Motorcycle();
+
         DriveServant servant = new DriveServant();
 
-        servant.driveTo(myFord, Direction.STRAIGHT, 10);
-        servant.driveTo(myFord, Direction.LEFT, 5);
-        servant.driveTo(myFord, Direction.RIGHT, 5);
-        servant.driveTo(myFord, Direction.STRAIGHT, 20);
-        servant.driveTo(myFord, Direction.LEFT, 15);
+        servant.driveTo(car, Direction.STRAIGHT, 10);
+        servant.driveTo(car, Direction.LEFT, 5);
+        servant.driveTo(car, Direction.RIGHT, 5);
+        System.out.println(car);
 
+        servant.driveTo(truck, Direction.STRAIGHT, 3);
+        servant.driveTo(truck, Direction.LEFT, 50);
+        servant.driveTo(truck, Direction.REVERSE, 10);
+        System.out.println(truck);
 
-        System.out.println(myFord);
+        servant.driveTo(motorcycle, Direction.REVERSE, 10);
+        servant.driveTo(motorcycle, Direction.RIGHT, 15);
+        servant.driveTo(motorcycle, Direction.STRAIGHT, 25);
+        System.out.println(motorcycle);
 
-        servant.refuel(myFord);
+        servant.refuel(car);
 
-        System.out.println("After refuel\n " + myFord);
+        System.out.println("Car after refueling\n" + car);
     }
 }

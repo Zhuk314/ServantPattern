@@ -29,7 +29,6 @@ public interface IDrivable {
      */
     void refuel();
 
-
     /** gives new direction for object
      *
      * @param direction new directon

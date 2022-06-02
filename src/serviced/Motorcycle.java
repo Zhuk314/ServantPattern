@@ -9,7 +9,7 @@ import java.util.Map;
  * @author Yurii Zhuk, David Pavlenko
  * @version 1.0
  */
-public class Car implements IDrivable{
+public class Motorcycle implements IDrivable{
     private final int MAX_FUEL_LOAD = 100;
 
     private boolean isEngineOn;
@@ -20,7 +20,7 @@ public class Car implements IDrivable{
     /**
      * Constructor for Car Class
      */
-    public Car() {
+    public Motorcycle() {
         this.trip = new HashMap<>();
         this.isEngineOn = false;
         this.fuelLoad = MAX_FUEL_LOAD;
@@ -130,7 +130,7 @@ public class Car implements IDrivable{
 
     @Override
     public String toString() {
-        return "Car{\n" +
+        return "Motorcycle{\n" +
                 "fuel level = " + fuelLoad + ",\n" +
                 "current direction = " + direction + ",\n" +
                 "total trip = " + trip + "\n" +

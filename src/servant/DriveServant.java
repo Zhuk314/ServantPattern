@@ -24,6 +24,10 @@ public class DriveServant {
         serviced.turnEngineOff();
     }
 
+    /** Refuel to full serviced object
+     *
+     * @param serviced IDrivable object
+     */
     public void refuel(IDrivable serviced){
         serviced.turnEngineOff();
         serviced.refuel();
