@@ -16,6 +16,10 @@ public class Application {
      * @param args not used
      */
     public static void main(String[] args) {
+        servantTest();
+    }
+
+    private static void servantTest() {
         Car car = new Car();
         SemiTruck truck = new SemiTruck();
         Motorcycle motorcycle = new Motorcycle();
@@ -41,4 +45,5 @@ public class Application {
 
         System.out.println("Car after refueling\n" + car);
     }
+
 }
