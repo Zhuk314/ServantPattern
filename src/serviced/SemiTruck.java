@@ -10,7 +10,7 @@ import java.util.Map;
  * @version 1.0
  */
 public class SemiTruck implements IDrivable{
-    private final int MAX_FUEL_LOAD = 100;
+    private final int MAX_FUEL_LOAD = 200;
 
     private boolean isEngineOn;
     private int fuelLoad;
